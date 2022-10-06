@@ -1,0 +1,28 @@
+
+<div class="watch-list-wrapper">
+
+ 
+    <h3 *ngIf="myseries.length < 1">Loading...</h3>
+
+    
+    <h3 >Popular Movies.</h3>
+    <div class="to-watch">
+<app-movie-tile *ngFor="let movie of myseries | paginate:{
+    itemsPerPage:tableSize, currentPage:page, totalItems:count}; let  i = index"
+ [imageUrl]="movie.images.poster ? movie.images.poster : 'https://t3.ftcdn.net/jpg/04/34/72/82/360_F_434728286_OWQQvAFoXZLdGHlObozsolNeuSxhpr84.jpg ' " [id]="movie.id"
+[isWatched]="movie.isWatched" [isFav]="movie.isFav"
+
+>
+</app-movie-tile>
+    </div>
+
+<div>
+    <pagination-controls
+    previousLabel="Previous"
+    nextLabel="Next"
+    screenReaderPageLabel="page"
+    (pageChange)="onTableDataChange($event)"
+    ></pagination-controls>
+</div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="movie-tile-wrapper">
+
+    <div>
+        <a class="poster-wrapper" button detail="false"  (click)="onPressup($event, id)" >
+            <img [src]="imageUrl" />
+        </a>
+        <div class="icon-bar">
+
+
+            <fa-icon [icon]="faPlus" (click)="addSerie(id)" *ngIf="!mySeries.includes(id)"></fa-icon>
+            <fa-icon [icon]="faDelete" (click)="removeSerie(id)" *ngIf="mySeries.includes(id)"></fa-icon>
+
+
+        </div>
+    </div>
+
+</div>

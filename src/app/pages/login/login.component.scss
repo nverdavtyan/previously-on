@@ -1,0 +1,53 @@
+.bg-image{
+    font-family: 'Poppins', sans-serif;
+   background-image: url("../../../assets/background.jpg");
+    
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+  
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+.form{
+    display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background-color: rgba(0,0,0,.75);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      min-height: 515px;
+      padding: 20px 0 30px;
+      width: 450px;
+  }
+
+
+.form h1{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+.form input{
+    background: #333;
+    color: #fff;
+    width:300px;
+    height: 40px;
+    margin:10px;
+    padding: 3px 7px;
+    font-size: 17px;
+    border:none;
+}
+.form button{
+    width:300px;
+}
+}

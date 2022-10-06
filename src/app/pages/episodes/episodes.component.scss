@@ -1,0 +1,62 @@
+.container{
+    min-height: 100vh;
+    background-image: url("../../../assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;   
+
+
+
+}
+
+.main{
+    padding:2rem;
+    backdrop-filter: blur(3px) contrast(80%);
+}
+
+
+.chat-message {
+  width:100%;
+    padding: 0.3rem;
+    .right-bubble {
+        position: relative;
+        background: #dcf8c6;
+        border-top-left-radius: .4em;
+        border-bottom-left-radius: .4em;
+        border-bottom-right-radius: .4em;
+        padding: 5px 10px 10px;
+        right: 0;
+       
+      span.msg-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: green;
+      }
+      span.msg-date {
+        font-size: 10px;
+        margin-left: 10px;
+      }
+    }
+    
+    .left-bubble {
+        position: relative;
+        background: #cec7c7;
+        border-top-right-radius: .4em;
+        border-bottom-left-radius: .4em;
+        border-bottom-right-radius: .4em;
+        padding: 5px 10px 10px;
+        left: 0;
+        
+      span.msg-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: blue;
+      }
+      span.msg-date {
+        font-size: 10px;
+        margin-left: 10px;
+      }
+    }
+  
+}

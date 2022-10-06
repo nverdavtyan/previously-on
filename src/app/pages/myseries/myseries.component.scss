@@ -1,0 +1,23 @@
+.watch-list-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+
+    :nth-child(3) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .to-watch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}

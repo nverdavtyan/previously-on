@@ -1,0 +1,85 @@
+<div class="body" *ngIf="information" [style.background-image]="'url(' + information.images.show + ')'">
+    <div class="container" >
+        <div class="poster">
+            <img [src]="information.images.poster" class="info-img">
+        </div>
+        <div class="info">
+            <div class="movie-title">
+                {{ information.title }}
+            </div>
+            <div class="movie-detail">
+                <div class="set">
+                    <label> PAYS </label>
+                    <span> {{ information.country }}</span>
+                </div>
+                <div class="set">
+                    <label>GENRES </label>
+                    <span>
+                        <span *ngFor="let genre of genres | keyvalue"> {{genre.value}}, </span>
+                    </span>
+                </div>
+
+                <div class="set">
+                    <label>NOMBRE DE SAISONS </label>
+                    <span> {{ information.seasons }} </span>
+                </div>
+                <div class="set">
+                    <label>NOTE</label>
+                    <span> {{ information.notes.mean }}</span>
+                </div>
+                <div class="set">
+                    <label>NOMBRE DE SAISONS</label>
+                    <span> {{ information.seasons }} </span>
+                </div>
+                <div class="set">
+                    <label>SHOWRUNNER</label>
+                    <span *ngIf="information.showrunner"> {{ information.showrunner.name}} </span>
+                </div>
+                <div class="set">
+                    <label>NOMBRE D'EPISODES</label>
+                    <span> {{ information.episodes }}</span>
+                </div>
+            </div>
+
+            <div class="movie-description">
+                <label>Description</label>
+                {{information.description}}
+            </div>
+
+            <!-- <div class="movie-cast">
+    <div class="header"> Voice Cast </div>
+    <div class="list">
+        <div class="cast">
+
+            <label for=""></label>
+        </div>
+
+    </div>
+     </div> -->
+        </div>
+
+
+
+<div class="episodes">
+
+
+        <div *ngFor="let serie of (allEp | async)"  >
+
+            <div *ngIf="serie.id === information.id" >
+                <div>Episodes non vus</div>
+            
+                <div *ngFor="let ep of serie.unseen">
+                    <div (click)="onPressUp( ep.id , information.shows.imdb_id)">
+                        <h2>{{ep.code}} : "{{ep.title}}"</h2>
+                        <fa-icon [icon]="filmIcon"  (click)="action(ep.id, ep.season, ep.episode)"></fa-icon>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>

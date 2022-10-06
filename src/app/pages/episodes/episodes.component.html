@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="main">
+    <div *ngIf="isDataAvailable">
+      <div>
+        <div>"{{information.title}}"</div>
+        <ng-container *ngFor="let pict of pictures">
+          <ng-container *ngIf="information.season == pict.seasonNumber && information.episode == pict.episodeNumber">
+            <img [src]="pict.image" class="episode-img">
+          </ng-container>
+        </ng-container>
+      </div>
+      <div>
+        Résumé : {{information.description}}
+      </div>
+      <div>
+        <div center text-center>
+          <div>
+            <div name="thumbs-up"></div>
+            <div>Note : {{information.note.mean}}/5</div>
+          </div>
+        </div>
+  
+        <div center text-center>
+          <button>
+            <fa-icon name="time"></fa-icon>
+            <div>Date de diff : {{information.date | date:'shortDate':'fr'}}</div>
+          </button>
+        </div>
+      </div>
+  
+    </div>
+    <div no-lines>
+      <div>
+        <h2>Commentaires</h2>
+      </div>
+      <div>
+        <div *ngFor="let item of comments" no-lines>
+          <div class="chat-message" text-right *ngIf="item.login === user.user.login">
+            <div class="right-bubble">
+              <span class="msg-name">{{item.login}}</span>
+              <span class="msg-date">{{item.date | date:'shortDate':'fr'}}</span>
+              <p text-wrap>{{item.text}}</p>
+            </div>
+          </div>
+          <div class="chat-message" text-left *ngIf="item.login !== user.user.login">
+            <div class="left-bubble">
+              <span class="msg-name">{{item.login}}</span>
+              <span class="msg-date">{{item.date | date:'shortDate':'fr'}}</span>
+              <p text-wrap>{{item.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="season">
+      <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" >
+        <label >Commentaire</label>
+        <textarea formControlName="commentaire" auto-grow="true" rows="6" cols="30"
+          placeholder="Laissez un commentaire ici..." required>
+      </textarea>
+              <button type="submit" >Envoyer</button>
+      </form>
+    </div>
+    <div *ngIf="!isDataAvailable">
+      Chargement...
+    </div>
+  </div>
+  
+
+  </div>

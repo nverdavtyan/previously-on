@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  background-color: black;
+}
+
+.btn {
+  display: inline-block;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.active-link {
+  background: #202020;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*pagination */
+.ngx-pagination {
+  padding-left: 0px !important;
+}
+
+.ngx-pagination li a {
+  color: white;
+}
+
+.ngx-pagination a:hover:not(.active) {
+  background: #3b3a3a !important;
+  border: transparent !important;
+}
+
+.ngx-pagination .current,
+.btn-info {
+  background: #e50914 !important;
+  border: transparent !important;
+}
+/*# sourceMappingURL=styles.css.map */

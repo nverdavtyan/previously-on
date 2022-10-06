@@ -1,0 +1,20 @@
+<div class="bg-image">
+  <div class="form-container">
+    
+<form [formGroup]="ionicForm" (ngSubmit)="submitForm()" class="form" >
+    <h1>S'identifier</h1>
+  
+    <input formControlName="login" type="text" class="form-control" placeholder="Pseudo" required>
+  
+    <input formControlName="password" type="password" class="form-control" placeholder="Mot de passe" required>
+    <span class="error ion-padding" *ngIf="isSubmitted">
+        Le mot de passe est requis.
+      </span>
+      
+    <button mat-raised-button class="btn" type="submit">S'identifier</button>
+
+  <a mat-raised-button class="btn" (click)="  openWebsite()">S'identifier par betaseries</a>
+  </form>
+
+</div>
+</div>

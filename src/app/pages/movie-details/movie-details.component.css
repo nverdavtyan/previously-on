@@ -1,0 +1,52 @@
+.container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  max-width: 100%;
+  grid-gap: 40px;
+  -ms-grid-columns: minmax(50px, 250px) minmax(400px, 690px) 1fr;
+      grid-template-columns: minmax(50px, 250px) minmax(400px, 690px) 1fr;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.info-img {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+
+.block-infos {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
+  padding-left: 0;
+  list-style: none;
+}
+
+.block-infos li {
+  margin-bottom: 0;
+}
+
+.block-infos li span {
+  color: #292929;
+}
+/*# sourceMappingURL=movie-details.component.css.map */

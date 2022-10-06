@@ -1,0 +1,25 @@
+<div class="tool-bar-container">
+    <div class="nav-container">
+        <a  routerLinkActive="active-link" class="btn" [routerLinkActiveOptions]="{exact: true}" routerLink="">
+         Accueil
+             </a>
+        <a [routerLink]="['mes-series']" *ngIf="user.length!==0" routerLinkActive="active-link"  class="btn">
+        Mes Series
+          </a>
+          <a [routerLink]="['profile']" *ngIf="user.length!==0" routerLinkActive="active-link"  class="btn">
+           Mon Compte
+              </a>
+          <a [routerLink]="['login']" *ngIf="user.length ===0" routerLinkActive="active-link"  class="btn">
+        S'identifier
+             </a>
+             <a *ngIf="user.length!==0"  tab="home" class="btn"  (click)="logout()">
+                Se déconnecter
+            </a>
+    </div>
+
+
+
+    <div class="page-title">
+        <h3>{{pageTitle}}</h3>
+    </div>
+</div>

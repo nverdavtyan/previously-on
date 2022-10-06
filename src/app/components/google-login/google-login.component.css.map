@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,cAAc;CACvB",
+    "sources": [
+        "google-login.component.scss"
+    ],
+    "names": [],
+    "file": "google-login.component.css"
+}

@@ -1,0 +1,47 @@
+.movie-tile-wrapper {
+  margin: .2rem;
+}
+
+.movie-tile-wrapper .poster-wrapper {
+  cursor: pointer;
+}
+
+.movie-tile-wrapper .poster-wrapper img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 220px;
+  height: 150px;
+  border: 1px solid #252525;
+  border-radius: 4px;
+}
+
+.movie-tile-wrapper .poster-wrapper :hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.movie-tile-wrapper .icon-bar {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  bottom: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.movie-tile-wrapper .icon-bar:hover {
+  bottom: 29px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.movie-tile-wrapper fa-icon {
+  cursor: pointer;
+}
+/*# sourceMappingURL=movie-tile.component.css.map */

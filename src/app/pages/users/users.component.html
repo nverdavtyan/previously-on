@@ -1,0 +1,60 @@
+<header>
+	<div>
+		<div >
+			<div *ngIf="display == 'results'">
+		</div>
+			<div class="ion-text-center">
+				<h4>Profil de {{userName}}</h4>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div>
+	<div>
+
+		<button class="center" color="medium" (click)="switch()">Gerer mes demandes...</button>
+
+	</div>
+	<div *ngIf="show">
+		<ng-container *ngIf="onDemands !== ''">
+			<div *ngFor="let friend of onDemands ">
+				<div  class="text-center" color="light">
+					<div>{{friend.value.login}}</div>
+				</div>
+				<div side="start">
+					<div color="danger" (click)="response(friend.value.id, false)">Refuser</div>
+				</div>
+				<div side="end">
+					<div (click)="response(friend.value.id, true)">Accepter</div>
+				</div>
+			</div>
+		</ng-container>
+		<div *ngIf="onDemands == ''">
+			<div>Vous n'avez pas de demande d'ami</div>
+		</div>
+		<div >Mes demandes en attentes</div>
+		<div *ngFor="let friend of onMyDemands | keyvalue">
+			<div>{{friend.value}}</div>
+		</div>
+	</div>
+
+
+
+	<h4>Mes amis</h4>
+	<div *ngIf='friendlist == "" '>
+		<p >Vous n'avez pas encore d'amis !</p>
+	</div>
+	<div *ngFor='let friend of friendlist.users '>
+		{{friend.login}}
+		<span button slot="end" name="person-remove-outline" (click)="click(friend.value.id, token)"></span>
+	</div>
+	<input [(ngModel)]="searchTerm" (ngModelChange)="searchFriend(token)"/>
+	<div *ngIf='searchTerm !== ""'>
+		<div *ngFor='let searched of friendSearch '>
+			{{searched.login}}
+			<button name="person-add-outline" (click)="addFriend(searched.value.id, token) "> ADD</button>
+		</div>
+	</div>
+
+</div>

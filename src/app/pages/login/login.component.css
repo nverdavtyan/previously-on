@@ -1,0 +1,70 @@
+.bg-image {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("../../../assets/background.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 515px;
+  padding: 20px 0 30px;
+  width: 450px;
+}
+
+.form-container .form h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.form-container .form input {
+  background: #333;
+  color: #fff;
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  padding: 3px 7px;
+  font-size: 17px;
+  border: none;
+}
+
+.form-container .form button {
+  width: 300px;
+}
+/*# sourceMappingURL=login.component.css.map */
